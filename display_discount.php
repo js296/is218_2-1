@@ -1,3 +1,11 @@
+<?php
+
+$product_description = $_POST['product_description'];
+$list_price = $_POST['list_price'];
+$discount_percentage = $_POST['discount_percent'];
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
