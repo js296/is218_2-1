@@ -3,6 +3,8 @@
 $product_description = filter_input(INPUT_POST, 'product_description');
 $list_price = filter_input(INPUT_POST, 'list_price');
 $discount_percentage = filter_input(INPUT_POST, 'discount_percent');
+$discount_amount = $list_price * ($discount_percentage * .01);
+$discount_price = $list_price - $discount_amount;
 
 ?>
 <!DOCTYPE html>
@@ -25,10 +27,10 @@ $discount_percentage = filter_input(INPUT_POST, 'discount_percent');
         <span><?php echo $discount_percentage; ?></span><br>
 
         <label>Discount Amount:</label>
-        <span><?php echo ''; ?></span><br>
+        <span><?php echo $discount_amount; ?></span><br>
 
         <label>Discount Price:</label>
-        <span><?php echo ''; ?></span><br>
+        <span><?php echo $discount_price; ?></span><br>
     </main>
 </body>
 </html>
